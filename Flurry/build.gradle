@@ -3,6 +3,9 @@ project.ext.versionOverride = project.version+'a'
 project.ext.networkName = 'yahoo'
 
 apply from: '../shared-build.gradle'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.dcard'
 
 dependencies {
     implementation "com.flurry.android:ads:${sdkVersion}@aar"
