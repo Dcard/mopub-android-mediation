@@ -17,6 +17,12 @@ project.description = "MoPub Mediation Adapter for " + project.name
 
 ext.sdkVersion = project.version.toString().replaceFirst(/.[0-9]+$/, '')
 
+def version
+if (project.ext.has("versionOverride")) {
+    version = project.ext.versionOverride.replaceFirst(/.[0-9]+$/, '')
+} else {
+    version = project.version
+}
 
 // These next two properties have default values specified below, but can be overridden in the
 // build.gradle by setting either or both of them just before the
@@ -43,14 +49,14 @@ if (!project.ext.has("networkName")) {
 
 android {
     defaultConfig {
-        versionName project.version
+        versionName version
 
         // Add a field called NETWORK_NAME to the BuildConfig class, which can be accessed by
         // the AdapterConfig.java code.
         buildConfigField("String", "NETWORK_NAME", "\"${project.ext.networkName}\"")
 
         // Set the .aar filename to mopub-NETWORK-adapters-VERSION-release.aar"
-        project.ext.set("archivesBaseName", "mopub-" + project.ext.artifactName + "-adapters-" + project.version)
+        project.ext.set("archivesBaseName", "mopub-" + project.ext.artifactName + "-adapters-" + version)
     }
 }
 
