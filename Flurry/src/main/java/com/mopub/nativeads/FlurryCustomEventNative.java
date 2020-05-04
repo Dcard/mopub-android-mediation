@@ -267,7 +267,7 @@ public final class FlurryCustomEventNative extends CustomEventNative {
      *
      * @see FlurryVideoEnabledNativeAd
      */
-    private static class FlurryStaticNativeAd extends StaticNativeAd implements FlurryBaseNativeAd {
+    public static class FlurryStaticNativeAd extends StaticNativeAd implements FlurryBaseNativeAd {
 
         @NonNull
         private final Context mContext;
@@ -414,7 +414,7 @@ public final class FlurryCustomEventNative extends CustomEventNative {
      * {@link FlurryNativeAdRenderer}. This class does not need to be included if you
      * are fetching only static ads. Use {@link FlurryStaticNativeAd} instead.
      */
-    static class FlurryVideoEnabledNativeAd extends BaseNativeAd implements FlurryBaseNativeAd {
+    public static class FlurryVideoEnabledNativeAd extends BaseNativeAd implements FlurryBaseNativeAd {
         private @NonNull
         final Context mContext;
         private @NonNull

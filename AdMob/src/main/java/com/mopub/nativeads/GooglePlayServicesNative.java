@@ -133,7 +133,7 @@ public class GooglePlayServicesNative extends CustomEventNative {
      * The {@link GooglePlayServicesNativeAd} class is used to load and map Google native
      * ads to MoPub native ads.
      */
-    static class GooglePlayServicesNativeAd extends BaseNativeAd {
+    public static class GooglePlayServicesNativeAd extends BaseNativeAd {
 
         // Native ad assets.
         private String mTitle;
