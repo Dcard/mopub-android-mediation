@@ -1,8 +1,11 @@
 project.version = '1.5.0.0'
+project.ext.versionOverride = project.version+'a'
 project.ext.networkName = 'verizon'
 
 apply from: '../shared-build.gradle'
+apply plugin: 'com.github.dcendents.android-maven'
 
+group='com.github.dcard'
 dependencies {
     implementation "com.verizon.ads:android-vas-standard-edition:${sdkVersion}"
 }

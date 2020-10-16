@@ -173,7 +173,7 @@ public class VerizonNative extends CustomEventNative {
         });
     }
 
-    static class VerizonStaticNativeAd extends StaticNativeAd {
+    public static class VerizonStaticNativeAd extends StaticNativeAd {
         @NonNull
         private final Context context;
         @NonNull
