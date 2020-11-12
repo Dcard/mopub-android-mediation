@@ -20,6 +20,7 @@ import com.verizon.ads.ErrorInfo;
 import com.verizon.ads.VASAds;
 import com.verizon.ads.edition.StandardEdition;
 import com.verizon.ads.nativeplacement.NativeAdFactory;
+import com.verizon.ads.nativeplacement.NativeAd;
 
 import org.json.JSONObject;
 
